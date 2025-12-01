@@ -1,73 +1,116 @@
-# React + TypeScript + Vite
+# CalcThreads Frontend - React + TypeScript (Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the frontend codebase for the client application, built using **React**, **TypeScript**, and **Vite**.  
+The goal of this project is to initialize the client environment so developers can begin building UI components efficiently.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## React Compiler
+- **React 19.2.0**
+- **TypeScript**
+- **Vite**
+- **Node.js (LTS recommended: v18 or v20)**
+- **npm / pnpm / yarn** (choose based on project standard)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Requirements to Run the Project
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Before running this project locally, ensure you have:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Node.js v18+**
+- **npm v9+** or an alternative package manager
+- A code editor such as **VS Code**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 How to Install & Run Locally
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone [https://github.com/bisawebdev/calcthreads-peer-trial-frontend-team-a.git](https://github.com/bisawebdev/calcthreads-peer-trial-frontend-team-a.git)
+cd calcthreads-peer-trial-frontend-team-a
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3️⃣ Start Development Server
+
+```bash
+npm run dev
+```
+
+### 4️⃣ Open in Browser
+
+Vite will serve the project at:
+
+```
+http://localhost:5173/
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├─ components/        # Reusable UI components
+ ├─ state/             # (Optional) State management / stores
+ ├─ App.tsx            # Main app component
+ ├─ main.tsx           # Entry point
+ └─ index.css          # Global styling
+```
+
+---
+
+## 🧪 Acceptance Criteria & Verification
+
+### **User Story**
+
+_As a developer, I want to initialize the React/TypeScript client project so that I have a front-end environment ready for building the user interface components._
+
+### **Acceptance Criteria**
+
+- The client project is initialized using Vite with TypeScript support.
+- The `App.tsx` component renders successfully in the browser.
+- The project structure includes folders for components and state management.
+- No TypeScript or compilation errors occur during development.
+
+---
+
+## 📝 Technical Notes (For Future Development)
+
+- Components should follow **atomic structure** or team coding guidelines.
+- Use **TypeScript strictly** (`strict: true`) for better type safety.
+- Keep state management inside `src/state/`.  
+  Suggested tools: Zustand, Redux Toolkit, Jotai, or Context API.
+- Avoid pushing build artifacts (`dist/`) — ensure `.gitignore` is correct.
+- Use **Conventional Commits**:
+  - `feat:` new feature
+  - `fix:` bug fix
+  - `chore:` config / minor updates
+  - `refactor:` code improvement
+  - `docs:` documentation updates
+
+---
+
+## 🤝 Contribution Guidelines
+
+- Create a new branch for every task:
+  ```
+  git checkout -b feat/<task-name>
+  ```
+- Commit using conventional commits.
+- Open a Pull Request with:
+  - User Story
+  - Acceptance Criteria
+  - Screenshot result
+  - Description of changes
+
+---
