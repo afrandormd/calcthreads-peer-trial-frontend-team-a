@@ -30,7 +30,7 @@ Before running this project locally, ensure you have:
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone [https://github.com/bisawebdev/calcthreads-peer-trial-frontend-team-a.git](https://github.com/bisawebdev/calcthreads-peer-trial-frontend-team-a.git)
+git clone https://github.com/bisawebdev/calcthreads-peer-trial-frontend-team-a.git
 cd calcthreads-peer-trial-frontend-team-a
 ```
 
